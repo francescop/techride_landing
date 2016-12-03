@@ -464,7 +464,6 @@
     });
 
     $("form[data-async]").submit(function(event) {
-      event.preventDefault();
       $('.fa-spinner').show('slow');
       var email = $("input[name='email']")[0].value;
       obj = {"customer_email": email}
@@ -492,6 +491,7 @@
       
       $('.fa-spinner').hide('slow');
       $('#form_result').show('slow');
+      event.preventDefault();
     });
 
   })
