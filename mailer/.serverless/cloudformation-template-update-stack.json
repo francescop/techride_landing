@@ -88,7 +88,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/mailer/dev/1480772881507-2016-12-03T13:48:01.507Z/mailer.zip"
+          "S3Key": "serverless/mailer/dev/1480774621685-2016-12-03T14:17:01.685Z/mailer.zip"
         },
         "FunctionName": "mail_sender",
         "Handler": "handler.send_email",
@@ -119,14 +119,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "SendUnderscoreemailLambdaVersionxtCebBAAZo6yWXkxDxZOpNocMMOxhj4meykBBoViI": {
+    "SendUnderscoreemailLambdaVersionS13q6ovr0EWjLjxDfAvawnQ4PHlebfNSPeClbosc": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "SendUnderscoreemailLambdaFunction"
         },
-        "CodeSha256": "xtCebBAAZo6yWXkx+DxZO/pNocMMOxhj4meykBBoViI="
+        "CodeSha256": "S13q6ovr0EWjLjxDfAvawnQ4PHleb/f/NSPe+Clbosc="
       }
     },
     "ApiGatewayRestApi": {
@@ -232,7 +232,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1480772881523": {
+    "ApiGatewayDeployment1480774621700": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -296,7 +296,7 @@
     "SendUnderscoreemailLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "SendUnderscoreemailLambdaVersionxtCebBAAZo6yWXkxDxZOpNocMMOxhj4meykBBoViI"
+        "Ref": "SendUnderscoreemailLambdaVersionS13q6ovr0EWjLjxDfAvawnQ4PHlebfNSPeClbosc"
       }
     },
     "ServiceEndpoint": {

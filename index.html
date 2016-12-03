@@ -466,13 +466,15 @@
     $("form[data-async]").submit(function(event) {
       event.preventDefault();
       $('.fa-spinner').show('slow');
+      var email = $("input[name='email']")[0].value;
+      obj = {"customer_email": email}
       $.ajax({
         type: "POST",
         url: $(this).attr('action'),
         dataType: 'json',
         contentType: "application/json",
         crossDomain: true,
-        data: $(this).serialize(), // serializes the form's elements.
+        data: JSON.stringify(obj), // serializes the form's elements.
         success: function(data){
           $('#form_result').addClass('alert-success');
           $('#form_result').find('.message').html("Grazie! Ricever&agrave; a breve una email di conferma.");

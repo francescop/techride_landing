@@ -37,7 +37,7 @@ def send_email(event, context):
     send_from       = 'techride@palazzinifrancesco.com'
     customer_email  = parameters['customer_email'] # visitor email
     send_to         = os.getenv('RECEIVER_EMAIL')
-    message         = "{} si e' iscritto alla newsletter di {}".format(reply_to, from_website)
+    message         = "{} si e' iscritto alla newsletter di {}".format(customer_email, from_website)
 
     msg             = MIMEText(message)
     msg['Subject']  = subject
